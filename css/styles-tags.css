@@ -1,0 +1,198 @@
+/* ==================== ОБЩИЕ НАСТРОЙКИ ==================== */
+html {
+    box-sizing: border-box; /* Упрощает расчет размеров элементов */
+    height: 100%; /* Занимает всю высоту окна */
+    padding: 0;
+    margin: 0;
+}
+
+/* Основной контейнер страницы - используем Flexbox для "липкого" футера */
+.wrapper {
+    box-sizing: border-box;
+    min-height: 100%; /* Минимальная высота - весь экран */
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Располагаем элементы в колонку */
+}
+
+/* ==================== ШАПКА САЙТА ==================== */
+.container {
+    display: flex; /* Flexbox для горизонтального расположения */
+    justify-content: space-between; /* Элементы равномерно распределены */
+    flex-grow: 1; /* Занимает доступное пространство */
+}
+
+/* Стили для навигационного меню */
+.menu {
+    display: inline;
+    text-align: right; /* Выравнивание меню по правому краю */
+    width: 33%; /* Занимает треть ширины */
+    margin-top: 43px;
+    margin-right: 100px; /* Отступ от правого края */
+	font-size: 20px;
+}
+
+/* Блок с логотипом */
+.logo {
+    width: 33%; /* Занимает треть ширины */
+}
+
+/* Блок с названием сайта */
+.name {
+    width: 33%; /* Занимает треть ширины */
+    margin-left: 120px; /* Отступ слева для центрирования */
+    margin-top: 35px;
+}
+
+/* Стили для всех ссылок */
+a {
+    color: #7a53d7; /* Фиолетовый цвет ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9f4852;
+    text-decoration: underline;
+}
+
+/* ==================== ОСНОВНОЙ КОНТЕНТ ==================== */
+main {
+    flex: 1 0 auto; /* Растягивается на всё доступное пространство */
+    padding: 20px 0; /* Вертикальные отступы */
+    max-width: 1200px; /* Ограничиваем ширину контента */
+    margin: 0 auto; /* Центрируем */
+    width: 90%; /* Занимаем 90% ширины */
+}
+
+header {
+    flex-grow: 0; /* Не растягивается */
+    flex-shrink: 0; /* Не сжимается */
+    padding: 10px;
+    background-color: rgba(149, 141, 230, 0.2); /* Полупрозрачный фиолетовый фон */
+}
+
+.text {
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Шрифт для текста */
+    font-size: 36px; /* Увеличим заголовок */
+    line-height: 1.2; /* Межстрочный интервал */
+    color: #9f4852; /* Красивый розовый */
+    text-align: center;
+    margin-bottom: 40px; /* Отступ перед списком */
+}
+
+/* ==================== ПОДВАЛ ==================== */
+.footer {
+    flex-grow: 0; /* Не растягивается */
+    flex-shrink: 0; /* Не сжимается */
+    padding: 40px;
+    background-color: rgba(149, 141, 230, 0.2); /* Такой же фон как у шапки */
+}
+
+/* ==================== СТИЛИ ДЛЯ СПИСКА СЛОВ ==================== */
+.list {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Основные стили для списка - ДОБАВЬ ЭТО! */
+.list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* ВОТ ВОЛШЕБНЫЕ КОЛОНКИ: */
+    columns: 4; /* 4 колонки на десктопе */
+    column-gap: 40px; /* Расстояние между колонками */
+    
+    /* Чтобы элементы не разрывались: */
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* Стили для элементов списка */
+.list li {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    
+    /* Запрещаем разрыв внутри элемента: */
+    break-inside: avoid-column;
+    
+    /* Красивое оформление: */
+    background: rgba(190, 165, 235, 0.1); /* Светло-фиолетовый фон */
+    border-radius: 10px;
+    border-left: 4px solid #7a53d7;
+    transition: all 0.3s ease;
+    
+    /* Выравниваем текст: */
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+
+.list li:hover {
+    background: rgba(159, 72, 82, 0.1); /* Розовый при наведении */
+    transform: translateX(10px);
+    border-left-color: #9f4852;
+    box-shadow: 0 5px 15px rgba(125, 83, 215, 0.2);
+}
+
+/* Ссылки внутри списка */
+.list a {
+    color: #7a53d7;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.list li:hover a {
+    color: #9f4852;
+}
+
+/* ==================== АДАПТИВНОСТЬ ==================== */
+
+/* Планшеты (768px - 1023px) - 3 колонки */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .list ul {
+        columns: 3;
+        column-gap: 30px;
+    }
+}
+
+/* Большие мобильные (480px - 767px) - 2 колонки */
+@media (min-width: 480px) and (max-width: 767px) {
+    .list ul {
+        columns: 2;
+        column-gap: 25px;
+    }
+    
+    .list li {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+}
+
+/* Маленькие мобильные (до 479px) - 1 колонка */
+@media (max-width: 479px) {
+    .list ul {
+        columns: 1;
+    }
+    
+    .text {
+        font-size: 28px; /* Уменьшаем заголовок на мобильных */
+    }
+    
+    main {
+        width: 95%; /* Увеличиваем ширину на мобильных */
+    }
+}
+
+/* Очень большие экраны - 5 колонок */
+@media (min-width: 1400px) {
+    .list ul {
+        columns: 5;
+        column-gap: 50px;
+    }
+}
