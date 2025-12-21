@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Базовые настройки документа -->
+    <meta charset="UTF-8"> <!-- Кодировка для поддержки русских букв -->
+    <meta name="viewport" content="width=device-width"> <!-- Для адаптивности на мобильных -->
+    <title>LIctionary</title> <!-- Заголовок вкладки браузера -->
+    
+    <!-- Подключение ресурсов -->
+    <link rel="icon" href="../img/logo2.png" type="image/png" sizes="32x32"> <!-- Фавиконка сайта -->
+    <link rel="stylesheet" href="../css/styles-words.css"> <!-- Наш основной файл стилей -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> <!-- Bootstrap для красоты -->
+</head>
+<body class="wrapper"> <!-- Основной контейнер страницы с классом для стилей -->
+    
+    <!-- ШАПКА САЙТА -->
+    <header>
+        <div class="container"> <!-- Контейнер для содержимого шапки -->
+            <!-- Блок с логотипом -->
+            <div class="logo">
+                <img src="../img/logo2.png" alt="Логотип" width="120" height="120"> <!-- Основной логотип -->
+            </div>
+            
+            <!-- Блок с названием сайта -->
+            <div class="name">
+                <img src="../img/logo-name.png" alt="LIctionary. Словарь английского сленга." width="267" height="66"> <!-- Название в картинке -->
+            </div>
+            
+            <!-- Навигационное меню -->
+            <div class="menu text">
+                <nav>
+                    <a href="../index.html" style="color: #7a53d7;">Home</a> <!-- Ссылка на главную страницу -->
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ -->
+    <main>
+        <!-- Главный контейнер для контента и сайдбара -->
+        <div class="content-container">
+            
+            <!-- БЛОК С ОСНОВНЫМ ТЕКСТОМ (слева) -->
+            <div class="word-box">
+                <div class="word">
+                    <!-- Заголовок слова -->
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+						<h1 style="color: #7a53d7; margin: 0;">Prolly</h1>
+						<h2 style="color: #bda5eb; margin: 0;">['prɒli]</h2>
+					</div>
+                    
+                    <!-- Определение на английском -->
+                    <p style="font-size: 22px; color: #a85b66;">A casual, shortened form of «probably.»</p>
+                    
+                    <!-- Перевод на русский -->
+                    <p style="font-size: 22px; color: #a85b66; margin-top: -10px;">Наверное, вероятно.</p>
+                    
+                    <!-- Пример использования -->
+                    <div class="example-box">
+                        <p style="margin-top: 10px;">«I'll prolly be there around 7.»</p>
+                    </div>
+                    
+					<div class="tags">
+						<!-- Теги для категоризации -->
+						<p style="color: #7a53d7;">Tags: 
+							<a href="../tags/other">other</a>
+						</p>
+					</div>
+                </div>
+            </div>
+            
+            <!-- САЙДБАР С ДОПОЛНИТЕЛЬНЫМИ СЛОВАМИ (справа) -->
+            <div class="sidebox">
+                <aside>
+                    <h2 style="color: #9f4852;">Learn more:</h2> <!-- Заголовок сайдбара -->
+                    <ul>
+                        <!-- Список ссылок на другие слова -->
+                        <li><a href="../words/jam">A bit of jam</a></li>
+                        <li><a href="../words/thirsty">Thirsty</a></li>
+                        <li><a href="../words/bible">Bible</a></li>
+                        <li><a href="../words/girl-dinner">Girl dinner</a></li>
+                        <li><a href="../words/npc">NPC (Normie)</a></li>
+                        <li><a href="../words/shayla">Shayla</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </main>
+    
+    <!-- ПОДВАЛ САЙТА -->
+    <footer>
+        <div class="footer">
+            <!-- Информация о создателях -->
+            <p style="color: #6248a0; font-family: Arial, sans-serif; font-size: 14px; text-align: center;">
+                Мы - студенты ДГТУ группы ЛИ11, факультета Прикладная Лингвистика! 
+                Lictionary является продуктом нашей проектной деятельности, словарем английского сленга.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
