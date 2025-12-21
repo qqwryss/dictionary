@@ -24,7 +24,6 @@ html {
 	width: 33%;
 	margin-top: 43px;
 	margin-right: 100px;
-	font-size: 20px;
 }
 
 .logo {
@@ -124,6 +123,76 @@ td {
 	padding: 40px;
 	background-color: rgba(149, 141, 230, 0.2);
 }
+
+/* Стили для списка */
+.list {
+    text-align: center; /* Центрируем весь список */
+    margin: 40px auto; /* Центрируем по горизонтали с отступами */
+    max-width: 90%; /* Ограничиваем ширину */
+}
+
+.list ul {
+    display: flex; /* Включаем flexbox для горизонтального расположения */
+    flex-wrap: wrap; /* Позволяем перенос на новую строку при нехватке места */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Выравниваем по вертикали */
+    gap: 20px; /* Отступы между элементами */
+    list-style: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем стандартные отступы */
+    margin: 0; /* Убираем стандартные отступы */
+}
+
+/* Стили для элементов списка */
+.list li {
+    padding: 12px 25px; /* Увеличим padding для лучшего вида */
+    
+    /* Красивое оформление: */
+    background: rgba(190, 165, 235, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #7a53d7;
+    transition: all 0.3s ease;
+    
+    /* Выравниваем текст: */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем текст внутри */
+    min-height: 65px;
+    min-width: 300px; /* Минимальная ширина для всех элементов */
+}
+
+/* Убираем старые свойства для колонок */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .list ul {
+        columns: auto; /* Отключаем columns */
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .list ul {
+        columns: auto; /* Отключаем columns */
+    }
+}
+
+@media (min-width: 1400px) {
+    .list ul {
+        columns: auto; /* Отключаем columns */
+        gap: 30px; /* Увеличиваем отступы на больших экранах */
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .list ul {
+        flex-direction: column; /* Вертикально на мобильных */
+        gap: 15px;
+    }
+    
+    .list li {
+        width: 80%; /* Ширина на мобильных */
+        min-width: unset; /* Сбрасываем минимальную ширину */
+    }
+}
+
 
 
 
